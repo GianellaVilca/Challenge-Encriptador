@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/imagenes/favicon.png">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <script defer type="text/javascript" src="./js/encriptador.js"></script>
+    <title>Encriptador</title>
+</head>
+<body>
+    <header> <img id="logo" src="./assets/imagenes/Logo.png"> </header>
+    <main>
+        <section class="form-box">
+            <textarea class="text-input" id="textoEncriptado" placeholder="Ingrese el texto aquí."></textarea>
+          <div class="advertencia">
+            <p> <img src="./assets/imagenes/exclamacion.png"> Solo letras minúsculas, sin acentos ni caracteres especiales</p>
+          </div>
+          <div class="contenedor-botones">
+            <input class="boton-encriptar" type="button" value="Encriptar" id="botonEncriptado">
+            <input class="boton-desencriptar" type="button" value="Desencriptar" id="botonDesencriptado">
+          </div>
+        </section>
+        <section class="msg-box">
+            <div class="contenedor-parrafo" id="parrafo">
+              <img src="./assets/imagenes/Muneco.svg" alt="imagenVector" class="imagen" id="imagenmuneco"> 
+              <br>
+              <h3>Ningún mensaje fue <br> encontrado</h3>
+              <br>
+              <p>Ingresa el texto que desees encriptar o <br> desencriptar</p>
+            </div>
+            <div class="contenedor-resultado">
+              <textarea cols="30" rows="10" class="texto-resultado" id="textoDesencriptado"></textarea>
+            </div>
+            <div class="contenedor-copiar">
+              <br>
+              <br>
+              <button type="button" class="botonCopiar" id="botonCopiar">Copiar</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        &copy Gianella Vilca<a title="linkedin" href="https://www.linkedin.com/in/gianella-vilca/" target="_blank"><img class="logos" src="./assets/imagenes/logo-linkedIn.png" alt="linkedin" /></a>
+        <a title="github" href="https://github.com/GianellaVilca/Encriptador-Alura" target="_blank"><img class="logos2" src="./assets/imagenes/logo-github.png" alt="github" /></a>
+    </footer>
+</body>
+<script type="text/javascript" src="./js/encriptador.js"></script> 
+<script type="text/javascript">
+    var btn = document.querySelector("#botonEncriptado");
+    btn.onclick = function(){
+      encriptar();
+      ocultar();
+    }
+    var btn2 = document.querySelector("#botonDesencriptado");
+    btn2.onclick = function(){
+      desencriptar();
+    }
+    var btn3 = document.querySelector("#botonCopiar");
+    btn3.onclick = function(){
+      copiar();
+    }
+</script> 
+</html>
